@@ -1,0 +1,10 @@
+^C:\USERS\PC2-2\DESKTOP\19092024\STEP1\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/PC2-2/Desktop/19092024/Step1 -BC:/Users/PC2-2/Desktop/19092024/Step1_build --check-stamp-file C:/Users/PC2-2/Desktop/19092024/Step1_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
